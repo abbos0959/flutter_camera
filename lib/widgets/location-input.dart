@@ -53,19 +53,16 @@ class _LocationInputState extends State<LocationInput> {
     });
 
     locationData = await location.getLocation();
- final lat = locationData.latitude;
+    final lat = locationData.latitude;
     final long = locationData.longitude;
 
     if (lat == null || long == null) {
       return;
     }
     setState(() {
-
-      pickedLocation=PlaceLocation(longituda: long, lalituda: lat, address: address)
+      // pickedLocation=PlaceLocation(longituda: long, lalituda: lat, address: address)
       isgettinglocation = false;
     });
-
-   
 
     setState(() {
       langituda = long;
